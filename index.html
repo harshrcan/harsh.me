@@ -187,6 +187,17 @@
             text-align: center;
             width: 100%;
         }
+        
+        /* Cursor effect for typed text */
+        #typed-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
 
         .wave {
             display: inline-block;
@@ -525,8 +536,6 @@
             margin-bottom: 1rem;
         }
 
-
-
         .skills-container {
             opacity: 0;
             transform: translateY(50px);
@@ -832,47 +841,6 @@
             text-align: center;
         }
 
-        /* Mailing form styles */
-        .mailing-form-container {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mailing-form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, var(--primary-neon), var(--accent-neon));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-
-        .mailing-form-container:hover::before {
-            opacity: 0.05;
-        }
-
-        #directMailForm input:focus,
-        #directMailForm textarea:focus {
-            outline: 2px solid var(--primary-neon);
-            border-color: var(--primary-neon);
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
-        }
-
-        #directMailForm button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
-        }
-
-        #directMailForm button:active {
-            transform: translateY(0);
-        }
-
-
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .intro-title {
@@ -992,7 +960,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="logo" style="font-size: 2rem; margin-bottom: 1rem;">Harsh Rana</div>
         <div>Loading Master's Profile...</div>
@@ -1001,10 +968,8 @@
         </div>
     </div>
 
-    <!-- Animated Background -->
     <div class="bg-particles"></div>
 
-    <!-- Header -->
     <header class="header" id="header">
         <div class="header-content">
             <div class="logo">Welcome to my Portfolio </div>
@@ -1017,7 +982,6 @@
         </div>
     </header>
 
-    <!-- Hi I'm Harsh Section -->
     <section class="intro-hero" id="intro-hero">
         <div class="intro-content">
             <h1 class="intro-title">Hi, I'm Harsh <span class="wave">👋</span></h1>
@@ -1027,7 +991,6 @@
         </div>
     </section>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="profile-card">
             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDQwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJ1cmwoI2dyYWQpIi8+CjxkZWZzPgo8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDBmZjg4IiBzdG9wLW9wYWNpdHk9IjAuMyIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDg4ZmYiIHN0b3Atb3BhY2l0eT0iMC4zIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTgwIiByPSI4MCIgZmlsbD0iIzAwZmY4OCIgZmlsbC1vcGFjaXR5PSIwLjEiIHN0cm9rZT0iIzAwZmY4OCIgc3Ryb2tlLXdpZHRoPSIzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDBmZjg4IiBmb250LXNpemU9IjQ4IiBmb250LWZhbWlseT0iQXJpYWwiPvCfkKg8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMzIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDBmZjg4IiBmb250LXNpemU9IjI4IiBmb250LWZhbWlseT0iQXJpYWwiPkhhcnNoPC90ZXh0Pgo8dGV4dCB4PSIyMDAiIHk9IjM2MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2NjY2NjYyIgZm9udC1zaXplPSIxNiIgZm9udC1mYW1pbHk9IkFyaWFsIj5EZXZlbG9wZXI8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iNDIwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMDA4OGZmIiBmb250LXNpemU9IjE0IiBmb250LWZhbWlseT0iQXJpYWwiPkhvdmVyIHRvIHNlZSBzdGF0czwvdGV4dD4KPC9zdmc+" alt="Harsh Rana" class="profile-cover" id="profileImage">
@@ -1082,23 +1045,21 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="section" id="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-text">
-                <p>Hi, I'm <strong>Harsh Rana</strong>  a passionate and curious web developer with an intermediate skill set and a love for building clean, functional, and user-friendly websites. I'm currently growing my expertise through hands-on projects that blend creativity with code.</p>
+                <p>Hi, I'm <strong>Harsh Rana</strong> a passionate and curious web developer with an intermediate skill set and a love for building clean, functional, and user-friendly websites. I'm currently growing my expertise through hands-on projects that blend creativity with code.</p>
                 
                 <p>Alongside web development, I've also worked as an <strong>Assistant Network Technician</strong>, where I gained real-world experience troubleshooting technical issues, maintaining hardware, and supporting network infrastructure giving me a well-rounded perspective on both the front and back end of tech systems.</p>
                 
                 <p>Whether I'm writing clean HTML/CSS, crafting interactive user interfaces with JavaScript, or diving into responsive design, I enjoy turning ideas into real, working web solutions. This site is a space where I share my journey, showcase my projects, and connect with like-minded people.</p>
                 
-                <p><strong>Thanks for stopping by  let's build something great!</strong></p>
+                <p><strong>Thanks for stopping by let's build something great!</strong></p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section class="section" id="skills">
         <h2 class="section-title">Skills</h2>
         <div class="skills-content">
@@ -1122,7 +1083,6 @@
                         <div class="learning-chip">Next.js</div>
                         <div class="learning-chip">MongoDB</div>
                         <div class="learning-chip">TypeScript</div>
-                        <!-- Duplicate set for seamless loop -->
                         <div class="learning-chip">Docker</div>
                         <div class="learning-chip">React</div>
                         <div class="learning-chip">C</div>
@@ -1136,7 +1096,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section class="section" id="projects">
         <h2 class="section-title">Projects</h2>
         <div class="projects-window">
@@ -1150,8 +1109,7 @@
             </div>
             
             <div class="projects-grid" id="projectsGrid">
-                <!-- Projects will be populated by JavaScript -->
-            </div>
+                </div>
             
             <div class="pagination">
                 <div class="page-info" id="pageInfo">Page 1 of 4</div>
@@ -1163,7 +1121,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="section" id="contact">
         <h2 class="section-title">Let's Connect</h2>
         <div class="contact-content">
@@ -1177,11 +1134,11 @@
                     <div>LinkedIn</div>
                 </a>
                 <a href="https://www.instagram.com/harsh_rana05x?igsh=MWRpNWt0eWJhZGZrNQ==" class="social-link" target="_blank" rel="noopener">
-                    <img src="insta.jpg" alt="Instagram">
+                    <div class="social-icon">📸</div>
                     <div>Instagram</div>
                 </a>
                 <a href="https://github.com/harshrcan" class="social-link" target="_blank" rel="noopener">
-                    <img src="git.jpg" alt="GitHub">
+                    <div class="social-icon">💻</div>
                     <div>GitHub</div>
                 </a>
                 <a href="mailto:harshrcan@gmail.com" class="social-link" target="_blank" rel="noopener">
@@ -1192,13 +1149,11 @@
         </div>
     </section>
 
-
-
     <script>
         // Projects data
         const projects = [
-             { title: "Modern Snake Game", status: "BETA", tech: ["JS"], duration: "2 days", link: "https://harshrcan.github.io/modern-snake-game/" },
-            { title: "Fully Functional Restraunt Website", status: "Completed", tech: ["HTML", "CSS", "JS"], duration: "2 weeks", link: "https://harshrcan.github.io/Restraunt-website-/ },
+            { title: "Modern Snake Game", status: "BETA", tech: ["JS"], duration: "2 days", link: "https://harshrcan.github.io/modern-snake-game/" },
+            { title: "Fully Functional Restaurant Website", status: "Completed", tech: ["HTML", "CSS", "JS"], duration: "2 weeks", link: "https://harshrcan.github.io/Restraunt-website-/" },
             { title: "Virtual Photobooth", status: "Completed", tech: ["HTML", "CSS", "JS"], duration: "3 days", link: "https://photobooth-by-harsh.netlify.app/" },
             { title: "Secret Project 4", status: "Classified", tech: ["React", "Socket.io"], duration: "2 weeks", link: "#project4" },
             { title: "Secret Project 5", status: "Classified", tech: ["React", "Node.js"], duration: "1 month", link: "#project5" },
@@ -1268,17 +1223,17 @@
             const endIndex = startIndex + projectsPerPage;
             const currentProjects = projects.slice(startIndex, endIndex);
 
-                         grid.innerHTML = currentProjects.map(project => `
-                 <a href="${project.link}" class="project-card" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
-                     <h3 class="project-title">${project.title}</h3>
-                     <div class="project-status">${project.status}</div>
-                     <div class="project-tech">
-                         ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                     </div>
-                     <div style="color: var(--text-secondary); font-size: 0.9rem;">Duration: ${project.duration}</div>
-                     <div style="color: var(--primary-neon); font-size: 0.8rem; margin-top: 0.5rem;">Click to explore →</div>
-                 </a>
-             `).join('');
+            grid.innerHTML = currentProjects.map(project => `
+                <a href="${project.link}" class="project-card" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;">
+                    <h3 class="project-title">${project.title}</h3>
+                    <div class="project-status">${project.status}</div>
+                    <div class="project-tech">
+                        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                    </div>
+                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Duration: ${project.duration}</div>
+                    <div style="color: var(--primary-neon); font-size: 0.8rem; margin-top: 0.5rem;">Click to explore →</div>
+                </a>
+            `).join('');
 
             document.getElementById('pageInfo').textContent = `Page ${currentPage} of ${totalPages}`;
             document.getElementById('prevBtn').disabled = currentPage === 1;
@@ -1327,14 +1282,12 @@
             
             // Touch events for better mobile experience
             profileCard.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                profileCard.style.transform = 'scale(0.98)';
+                // Removed preventDefault to allow scrolling if not interacting
             });
             
             profileCard.addEventListener('touchend', (e) => {
-                e.preventDefault();
+                // e.preventDefault(); // Removed to allow clicks to propagate
                 profileCard.style.transform = '';
-                handleCardInteraction();
             });
             
             // Reset on window resize
@@ -1349,7 +1302,6 @@
 
         // Handle image loading
         const profileImage = document.querySelector('#profileImage');
-        const fallbackDiv = document.querySelector('.profile-cover.error');
         
         // Try to load the user's actual image first
         function tryLoadUserImage() {
@@ -1359,7 +1311,7 @@
                 profileImage.src = 'myimg.jpg';
             };
             testImg.onerror = function() {
-                console.log('myimg.jpg not found, using placeholder');
+                console.log('myimg.jpg not found, using SVG placeholder');
                 // Keep the placeholder SVG that's already loaded
             };
             testImg.src = 'myimg.jpg';
@@ -1386,20 +1338,21 @@
             observer.observe(el);
         });
 
-
-
         // Touch gestures for mobile project navigation
         let touchStartX = 0;
         let touchEndX = 0;
 
-        document.getElementById('projectsGrid').addEventListener('touchstart', e => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
+        const projectsGrid = document.getElementById('projectsGrid');
+        if(projectsGrid) {
+            projectsGrid.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
 
-        document.getElementById('projectsGrid').addEventListener('touchend', e => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleGesture();
-        });
+            projectsGrid.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleGesture();
+            });
+        }
 
         function handleGesture() {
             const swipeThreshold = 50;
@@ -1481,9 +1434,6 @@
             }
             type();
         }
-
-
     </script>
 </body>
 </html>
-

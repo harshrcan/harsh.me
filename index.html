@@ -1187,15 +1187,34 @@
             }
         }
 
-        // Loading screen
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loadingScreen').style.opacity = '0';
+        // Loading screen - with fallback to prevent stuck loading
+        function hideLoadingScreen() {
+            const loadingScreen = document.getElementById('loadingScreen');
+            if (loadingScreen) {
+                loadingScreen.style.opacity = '0';
                 setTimeout(() => {
-                    document.getElementById('loadingScreen').style.display = 'none';
+                    loadingScreen.style.display = 'none';
                 }, 500);
-            }, 3000);
+            }
+        }
+
+        // Try to hide loading screen when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(hideLoadingScreen, 3000);
+            });
+        } else {
+            // DOM already loaded
+            setTimeout(hideLoadingScreen, 3000);
+        }
+
+        // Fallback: hide loading screen after window load (for images/resources)
+        window.addEventListener('load', () => {
+            setTimeout(hideLoadingScreen, 3000);
         });
+
+        // Safety fallback: force hide after 5 seconds regardless
+        setTimeout(hideLoadingScreen, 5000);
 
         // Header scroll effect
         window.addEventListener('scroll', () => {

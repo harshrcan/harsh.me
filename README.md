@@ -1,52 +1,105 @@
-# 👨‍💻 Harsh - Level 3 Developer Portfolio
+# Portfolio Website
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+A modern portfolio website built with React, Vite, and Tailwind CSS, inspired by rython.dev.
 
-A fully responsive, gamified personal portfolio website featuring a dark/neon cyberpunk aesthetic. This site showcases my projects, skills, and contact info without relying on heavy frameworks—just pure, clean code.
+## Features
 
-## 🌟 Key Features
+- 🎨 Clean, minimal design matching rython.dev
+- 📱 Fully responsive (mobile-first)
+- ✨ Smooth scroll animations
+- 🎯 Active section highlighting in navigation
+- 🌙 Dark theme with purple accents
+- ⚡ Fast performance with Vite
+- 🎭 Intersection Observer for scroll animations
 
-* **Neon & Glassmorphism UI:** Modern dark mode design with glowing accents and glass-pane effects.
-* **Gamified Profile Card:** Interactive "Level 3 Developer" card with health/energy bars and power-ups.
-* **Interactive Animations:**
-    * Typing text effect ("Problem Solver", "Winner", etc.).
-    * Animated skill progress bars.
-    * Floating background particles.
-* **Project Gallery:** Custom JavaScript pagination system to browse projects with touch swipe support for mobile.
-* **Responsive Design:** optimized for Desktop, Laptops, Tablets, and Mobile devices.
-* **Zero Dependencies:** No Bootstrap, Tailwind, or jQuery required. Runs natively in any browser.
+## Tech Stack
 
+- React 18
+- Vite
+- Tailwind CSS
+- Vanilla JavaScript (no heavy libraries)
 
+## Getting Started
 
-## 🛠️ Installation & Setup
+### Prerequisites
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/harshrcan/your-repo-name.git](https://github.com/harshrcan/your-repo-name.git)
-    ```
-2.  **Open the project:**
-    Simply navigate to the folder and open `index.html` in your web browser. No `npm install` or build steps required!
+- Node.js (v18 or higher)
+- npm or yarn
 
-## ⚙️ How to Customize
+### Installation
 
-### 1. Profile Picture
-The code automatically checks for a file named `myimg.jpg` in the root folder.
-* **To add your photo:** Save your profile picture as `myimg.jpg` in the same folder as `index.html`.
-* **Fallback:** If no image is found, it defaults to a cool SVG avatar.
+1. Install dependencies:
+```bash
+npm install
+```
 
-### 2. updating Projects
-Open `index.html` and scroll to the `<script>` tag at the bottom. Edit the `projects` array:
+2. Start development server:
+```bash
+npm run dev
+```
 
-```javascript
-const projects = [
-    { 
-      title: "Your New Project", 
-      status: "Completed", 
-      tech: ["React", "Node"], 
-      duration: "1 week", 
-      link: "[https://link-to-project.com](https://link-to-project.com)" 
-    },
-    // ... add more objects here
-];
+3. Build for production:
+```bash
+npm run build
+```
+
+4. Preview production build:
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+portfolio-site/
+├── public/
+│   ├── images/
+│   │   ├── pfp.webp
+│   │   └── projects/
+│   └── HarshRana_Resume.pdf
+├── src/
+│   ├── components/
+│   │   ├── Navigation.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Contact.jsx
+│   │   └── Footer.jsx
+│   ├── styles/
+│   │   └── globals.css
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+```
+
+## Customization
+
+### Update Content
+
+Edit the component files in `src/components/` to update:
+- Personal information
+- Projects
+- Skills
+- Experience
+- Social links
+
+### Styling
+
+- Tailwind configuration: `tailwind.config.js`
+- Global styles: `src/styles/globals.css`
+- Component styles: Use Tailwind classes directly in components
+
+### Images
+
+Place your images in:
+- Profile picture: `public/images/pfp.webp`
+- Project images: `public/images/projects/`
+- Resume: `public/HarshRana_Resume.pdf`
+
+## License
+
+MIT

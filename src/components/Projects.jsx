@@ -4,16 +4,6 @@ import { GithubIcon } from './Icons'
 const Projects = () => {
   const projects = [
     {
-      title: 'Modern Snake Game',
-      description:
-        'A modern take on the classic Snake game with smooth gameplay, responsive controls, and a clean UI.',
-      tech: ['JavaScript', 'HTML5 Canvas', 'CSS'],
-      link: 'https://snake.game.harshrana.me/',
-      repo: '',
-      gradient: 'from-emerald-500/20 to-teal-500/20',
-      accent: 'text-emerald-400',
-    },
-    {
       title: 'Restaurant Website',
       description:
         'A fully functional restaurant website featuring a menu showcase, reservation system, and contact integration.',
@@ -24,16 +14,6 @@ const Projects = () => {
       accent: 'text-orange-400',
     },
     {
-      title: 'Virtual Photobooth',
-      description:
-        'An interactive virtual photobooth with filters, effects, and real-time camera integration for fun photo sessions.',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://photobooth-by-harsh.netlify.app/',
-      repo: '',
-      gradient: 'from-pink-500/20 to-rose-500/20',
-      accent: 'text-pink-400',
-    },
-    {
       title: 'rentAroom',
       description:
         'A room rental platform that connects property owners with tenants, featuring listings, search, and user management.',
@@ -42,6 +22,26 @@ const Projects = () => {
       repo: '',
       gradient: 'from-blue-500/20 to-indigo-500/20',
       accent: 'text-blue-400',
+    },
+    {
+      title: 'Modern Snake Game',
+      description:
+        'A modern take on the classic Snake game with smooth gameplay, responsive controls, and a clean UI.',
+      tech: ['JavaScript', 'HTML5 Canvas', 'CSS'],
+      link: 'https://snake.game.harshrana.me/',
+      repo: '',
+      gradient: 'from-emerald-500/20 to-teal-500/20',
+      accent: 'text-emerald-400',
+    },
+    {
+      title: 'Virtual Photobooth',
+      description:
+        'An interactive virtual photobooth with filters, effects, and real-time camera integration for fun photo sessions.',
+      tech: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://photobooth-by-harsh.netlify.app/',
+      repo: '',
+      gradient: 'from-pink-500/20 to-rose-500/20',
+      accent: 'text-pink-400',
     },
   ]
 

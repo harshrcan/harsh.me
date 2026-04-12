@@ -65,7 +65,7 @@ const Hero = () => {
           Currently growing through hands-on projects that blend{' '}
           <span className="text-portfolio-accent font-medium">creativity</span> with{' '}
           <span className="text-portfolio-purple font-medium">code</span>.
-          Also experienced as an Assistant Network Technician with real-world infrastructure skills.
+          Also working as an Assistant Network Technician at Hillcrest Computer Solutions in Vancouver, deploying POS systems, PCs, and supporting network infrastructure.
         </p>
 
         <div className="flex items-center justify-center gap-3 pt-2">

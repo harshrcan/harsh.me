@@ -8,12 +8,12 @@ const Experience = () => {
     experience: [
       {
         title: 'Assistant Network Technician',
-        date: '2023 - Present',
-        company: 'Network Solutions',
-        location: 'India',
+        date: 'Jan 2025 - Present',
+        company: 'Hillcrest Computer Solutions',
+        location: 'Vancouver, BC',
         description:
-          'Gained real-world experience troubleshooting technical issues, maintaining hardware, and supporting network infrastructure. This role provided a well-rounded perspective on both the front and back end of tech systems.',
-        skills: ['Networking', 'Hardware', 'Troubleshooting'],
+          'Troubleshoot technical issues, maintain hardware, and support network infrastructure. Deploy tech equipment including POS systems, PCs, and peripherals for clients. This role has provided a well-rounded perspective on both the front and back end of tech systems.',
+        skills: ['Networking', 'Hardware', 'Troubleshooting', 'POS Deployment', 'PC Setup'],
       },
     ],
     education: [],

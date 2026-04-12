@@ -19,7 +19,7 @@ const Experience = () => {
         title: 'Cashier',
         date: '2021 - 2024',
         company: 'Family-Owned Retail Store',
-        location: 'Chandigarh, India',
+        location: 'Vancouver, BC',
         description:
           'Processed cash, card, and digital transactions accurately for 50+ customers daily. Maintained billing records, daily sales logs, and receipts with zero discrepancy over 3 years. Guided customers through product selection and restocked shelves to improve the shopping experience.',
         skills: ['Cash Handling', 'POS Systems', 'Customer Service', 'Inventory Management'],

@@ -18,7 +18,7 @@ const Skills = () => {
       textColor: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       borderColor: 'border-purple-500/20',
-      skills: ['Python', 'C++'],
+      skills: ['Python', 'C++', 'Java'],
     },
     {
       title: 'Tools & Platforms',
@@ -27,7 +27,7 @@ const Skills = () => {
       textColor: 'text-amber-400',
       bgColor: 'bg-amber-500/10',
       borderColor: 'border-amber-500/20',
-      skills: ['Git', 'GitHub', 'VS Code', 'Vite'],
+      skills: ['Git', 'GitHub', 'VS Code', 'Vite', 'ServiceNow', 'TeamViewer'],
     },
     {
       title: 'Currently Learning',
@@ -36,7 +36,7 @@ const Skills = () => {
       textColor: 'text-emerald-400',
       bgColor: 'bg-emerald-500/10',
       borderColor: 'border-emerald-500/20',
-      skills: ['React', 'TypeScript', 'Docker', 'Next.js', 'MongoDB', 'Java', 'C'],
+      skills: ['React', 'TypeScript', 'Docker', 'Next.js', 'MongoDB'],
     },
     {
       title: 'Languages',

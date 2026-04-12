@@ -12,11 +12,30 @@ const Experience = () => {
         company: 'Hillcrest Computer Solutions',
         location: 'Vancouver, BC',
         description:
-          'Troubleshoot technical issues, maintain hardware, and support network infrastructure. Deploy tech equipment including POS systems, PCs, and peripherals for clients. This role has provided a well-rounded perspective on both the front and back end of tech systems.',
+          'Troubleshoot technical issues, maintain hardware, and support network infrastructure. Deploy tech equipment including POS systems, PCs, and peripherals for clients. Gained a well-rounded perspective on both the front and back end of tech systems.',
         skills: ['Networking', 'Hardware', 'Troubleshooting', 'POS Deployment', 'PC Setup'],
       },
+      {
+        title: 'Cashier',
+        date: '2021 - 2024',
+        company: 'Family-Owned Retail Store',
+        location: 'Chandigarh, India',
+        description:
+          'Processed cash, card, and digital transactions accurately for 50+ customers daily. Maintained billing records, daily sales logs, and receipts with zero discrepancy over 3 years. Guided customers through product selection and restocked shelves to improve the shopping experience.',
+        skills: ['Cash Handling', 'POS Systems', 'Customer Service', 'Inventory Management'],
+      },
     ],
-    education: [],
+    education: [
+      {
+        title: 'Diploma in Computer Information Systems',
+        date: 'Expected 2026',
+        company: 'Kwantlen Polytechnic University (KPU)',
+        location: 'Vancouver, BC',
+        description:
+          'Studying computer information systems with coursework in programming, databases, networking, and web development.',
+        skills: ['Programming', 'Databases', 'Web Development', 'Networking'],
+      },
+    ],
     achievements: [],
   }
 

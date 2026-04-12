@@ -60,11 +60,11 @@ const Contact = () => {
                   Harsh Rana
                 </h3>
                 <p className="text-portfolio-accent text-sm font-medium mb-1">
-                  Web Developer
+                  CIS Student & Web Developer
                 </p>
                 <p className="text-portfolio-text-muted text-sm flex items-center justify-center sm:justify-start gap-1">
                   <MapPin size={14} />
-                  India
+                  Vancouver, BC
                 </p>
               </div>
             </div>

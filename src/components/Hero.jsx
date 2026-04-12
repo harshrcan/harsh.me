@@ -5,7 +5,7 @@ import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons'
 const Hero = () => {
   const [displayText, setDisplayText] = useState('')
   const [isTypingDone, setIsTypingDone] = useState(false)
-  const fullText = 'Web Developer & Network Tech'
+  const fullText = 'CIS Student & Web Developer'
 
   useEffect(() => {
     let i = 0
@@ -61,11 +61,13 @@ const Hero = () => {
         </div>
 
         <p className="text-base sm:text-lg text-portfolio-text-secondary leading-relaxed max-w-2xl mx-auto">
-          A passionate web developer with a love for building clean, functional websites.
-          Currently growing through hands-on projects that blend{' '}
-          <span className="text-portfolio-accent font-medium">creativity</span> with{' '}
-          <span className="text-portfolio-purple font-medium">code</span>.
-          Also working as an Assistant Network Technician at Hillcrest Computer Solutions in Vancouver, deploying POS systems, PCs, and supporting network infrastructure.
+          Computer Information Systems student at{' '}
+          <span className="text-portfolio-accent font-medium">Kwantlen Polytechnic University</span>{' '}
+          with a passion for building clean, functional websites.
+          Currently working as an Assistant Network Technician at Hillcrest Computer Solutions in Vancouver,
+          deploying POS systems, PCs, and supporting network infrastructure.
+          Fluent in{' '}
+          <span className="text-portfolio-purple font-medium">English, Hindi & Punjabi</span>.
         </p>
 
         <div className="flex items-center justify-center gap-3 pt-2">

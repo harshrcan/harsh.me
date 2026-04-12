@@ -1,4 +1,4 @@
-import { Code2, Server, Wrench, BookOpen } from 'lucide-react'
+import { Code2, Server, Wrench, BookOpen, Languages } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
@@ -37,6 +37,15 @@ const Skills = () => {
       bgColor: 'bg-emerald-500/10',
       borderColor: 'border-emerald-500/20',
       skills: ['React', 'TypeScript', 'Docker', 'Next.js', 'MongoDB', 'Java', 'C'],
+    },
+    {
+      title: 'Languages',
+      icon: Languages,
+      color: 'from-rose-500 to-pink-500',
+      textColor: 'text-rose-400',
+      bgColor: 'bg-rose-500/10',
+      borderColor: 'border-rose-500/20',
+      skills: ['English (Fluent)', 'Hindi (Fluent)', 'Punjabi (Fluent)'],
     },
   ]
 

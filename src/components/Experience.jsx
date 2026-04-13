@@ -27,7 +27,17 @@ const Experience = () => {
         skills: ['Programming', 'Databases', 'Web Development', 'Networking'],
       },
     ],
-    achievements: [],
+    achievements: [
+      {
+        title: 'Survived COVID without getting infected',
+        date: '2020 - 2022',
+        company: 'Personal',
+        location: '',
+        description:
+          'Stayed healthy throughout the COVID-19 pandemic without getting infected.',
+        skills: ['Discipline', 'Consistency'],
+      },
+    ],
   }
 
   const tabs = [

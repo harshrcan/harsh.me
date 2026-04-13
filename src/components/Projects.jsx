@@ -24,24 +24,14 @@ const Projects = () => {
       accent: 'text-blue-400',
     },
     {
-      title: 'Modern Snake Game',
+      title: 'Object Hunt (Multiplayer Game)',
       description:
-        'A modern take on the classic Snake game with smooth gameplay, responsive controls, and a clean UI.',
-      tech: ['JavaScript', 'HTML5 Canvas', 'CSS'],
-      link: 'https://snake.game.harshrana.me/',
+        'A multiplayer hide-and-seek style game where players blend in as objects and try to outsmart the hunters.',
+      tech: ['Multiplayer', 'Game'],
+      link: 'https://www.objecthunt.com/',
       repo: '',
-      gradient: 'from-emerald-500/20 to-teal-500/20',
-      accent: 'text-emerald-400',
-    },
-    {
-      title: 'Virtual Photobooth',
-      description:
-        'An interactive virtual photobooth with filters, effects, and real-time camera integration for fun photo sessions.',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      link: 'https://photobooth-by-harsh.netlify.app/',
-      repo: '',
-      gradient: 'from-pink-500/20 to-rose-500/20',
-      accent: 'text-pink-400',
+      gradient: 'from-violet-500/20 to-fuchsia-500/20',
+      accent: 'text-violet-400',
     },
   ]
 
@@ -134,7 +124,7 @@ const Projects = () => {
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl border border-portfolio-border text-portfolio-text-secondary font-medium text-sm hover:border-portfolio-accent/50 hover:text-portfolio-accent transition-all duration-300"
           >
             <GithubIcon size={16} />
-            See more on GitHub
+            View more projects
           </a>
         </div>
       </div>

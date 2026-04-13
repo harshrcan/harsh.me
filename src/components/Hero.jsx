@@ -62,12 +62,10 @@ const Hero = () => {
 
         <p className="text-base sm:text-lg text-portfolio-text-secondary leading-relaxed max-w-2xl mx-auto">
           Computer Information Systems student at{' '}
-          <span className="text-portfolio-accent font-medium">Kwantlen Polytechnic University</span>{' '}
-          with a passion for building clean, functional websites.
-          Currently working as an Assistant Network Technician at Hillcrest Computer Solutions in Vancouver,
-          deploying POS systems, PCs, and supporting network infrastructure.
-          Fluent in{' '}
-          <span className="text-portfolio-purple font-medium">English, Hindi & Punjabi</span>.
+          <span className="text-portfolio-accent font-medium">Kwantlen Polytechnic University</span>.{' '}
+          I love tech — whether it's tinkering with new tools, diving into a framework I've never tried,
+          or just exploring what's possible. I'm always curious, always learning, and always looking
+          for the next thing to build or break apart and understand.
         </p>
 
         <div className="flex items-center justify-center gap-3 pt-2">
